@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body{
+            /* untuk mengatur jarak agar lebih mepet */
+            margin: 0;
+            font-family: poppins, sans-serif;
+        }
+
+        header{
+            background-color: #f83232;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header a{
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul{
+            list-style: none;
+            background-color: #f83232;
+            /* untuk mengatur jarak antara nav sama header */
+            margin: 0;
+            padding: 0;
+            /* agar ul nya bisa di pindah-pindah kan */
+            display: flex;
+            text-decoration: none;
+        }
+
+        nav ul li {
+            padding: 15px 130px;
+            font-size: 20px;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li:hover{
+            background-color: #d12929;
+            color: #f1f1f1;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        nav ul a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .aboutus{
+            padding-top: 5px;
+            background-color: #f1f1f1;
+            min-height: 250px;
+        }
+
+        .headabout{
+            text-align: center;
+            background-image: url('asset/page.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 220px;
+            padding: 60px 20px;
+            color: white;
+            box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.25);
+        }
+
+        .maincontent{
+            padding: 40px 80px;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333333;
+        }
+
+        .product-section {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .product-img {
+            width: 350px;
+        }
+
+        .product-title {
+            font-size: 32px;
+            font-weight: 900;
+            margin-top: 10px;
+        }
+
+        .product-desc {
+            width: 45%;
+            margin: 10px auto;
+            line-height: 1.6;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .section-title {
+            padding: 70px 0 20px 0;
+            text-align: left;
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        .section-title h2 {
+            font-weight: 900;
+            margin: 0;
+            font-size: 45px;
+        }
+
+        .section-title .line {
+            width: 100%;
+            height: 3px;
+            background: black;
+            margin-top: 10px;
+        }   
+
+        .product-list {
+            width: 85%;
+            margin: 0 auto;
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 350px;
+            margin-bottom: 10px;
+        }
+
+        .product-card h2 {
+            font-size: 32px;
+            font-weight: 900;
+            margin: 15px 0 5px 0;
+        }
+
+        .product-card p {
+            width: 80%;
+            margin: 0 auto;
+            font-size: 17px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .visi-misi{
+            background-color: #f1f1f1;
+            padding: 50px 80px;
+            text-align: center;
+        }
+
+        .visi-misi h2{
+            font-size: 30px;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background: #111;
+            color: white;
+            padding: 60px 80px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .footer-left {
+            max-width: 300px;
+        }
+
+        .logo img{
+            height: 50px;
+            width: auto;
+        }
+
+        .footer-middle {
+            display: flex;
+            gap: 60px;
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }   
+
+        .footer-col a {
+            display: block;
+            color: #ddd;
+            font-size: 14px;
+            margin-bottom: 8px;
+            text-decoration: none;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #333;
+            margin: 40px 0;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .socials i{
+            width: 15px;
+            margin-left: 20px;
+            cursor: pointer;
+            font-size: 25px;
+        }
+
+        .socials a i{
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="latihan 3.html">
+            <img src="asset/jago.png" alt="logo" width="150px" height="50px">
+        </a>
+    </header>
+
+    <nav>
+        <ul>
+            <a href="#aboutus">
+                <li>about us</li>
+            </a>
+            <a href="#menu">
+                <li>menu</li>
+            </a>
+            <a href="#visi-misi">
+                <li>visi-misi</li>
+            </a>
+            <a href="#footer">
+                <li>footer</li>
+            </a>
+        </ul>
+    </nav>
+
+    <div class="aboutus" id="aboutus">
+        <div class="headabout">
+            <H2>THE JAGO STORY</H2>
+            <P>Making great coffee accessible and affordable, one neighborhood at a time.</P>
+        </div>
+        <div class="maincontent">
+            <p>
+                Nothing is more Indonesian than a great cup of coffee. This archipelago produces some of the best coffees that you can find in the world. However, most Indonesians don’t get to experience that great product for themselves. Instead, instant coffees are the go-to, dominating the market at 90% of coffee consumed. To have that great cup of joe, you’ll have to pay a premium.
+                <br>
+                <br>
+                That is why we started Jago. We aim to make great coffee, sourced in Indonesia, accessible to anyone. Opening up cafes requires a lot of money and requires significant time to launch, so instead we created an EV (Electric Vehicle) cafe that was mobile: a cafe-on-wheels. A cafe that can come to you, wherever you are, whenever you want it to.
+                <br>
+                <br>
+                A cup of a coffee prepared fresh on the spot so you can really taste all that Indonesian coffee has to offer.
+                <br>
+                <br>    
+                These past few years we have turned a single cafe into a fleet of electric-powered cafes that zip around neighborhood areas, serving fresh coffees and teas to all customers.  But we wouldn’t be able to do this without our Jagoans, the cart operators, who serve as your personal neighborhood barista. They’re always nearby, ready to serve you a fresh brew.
+            </p>
+        </div>
+    </div>
+
+    <section class="section-title" id="menu">
+        <h2>SEASONAL</h2>
+        <div class="line"></div>
+    </section>
+    <section class="product-section">
+        <img src="asset/bubbletea.webp" class="product-img" alt="Bubble Tea">
+        <h1 class="product-title">JAGO BUBBLE TEA</h1>
+        <p class="product-desc">
+            Brings back 2000s nostalgia! Creamy milk tea, brown sugar, and chewy pearls.rasakan kenikmatan teh nya yang segar serta kenyalnya pearl yang bikin nagih.
+        </p>
+    </section>
+
+    <section class="section-title">
+        <h2>COFFEE</h2>
+        <div class="line"></div>
+    </section>
+    
+    <section class="product-list">
+        <div class="product-card">
+            <img src="asset/americano.webp" alt="Jago Americano">
+            <h2>JAGO AMERICANO</h2>
+            <p>JAGO's signature Iced Americano, 100% arabica beans. gratis jika memesan americano 50 shot</p>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/kopi susu.webp" alt="Kopi Susu Jago">
+            <h2>KOPI SUSU JAGO</h2>
+            <p>Jago's brown sugar iced coffee. manisnya gula merah yang menggugah selera</p>
+        </div>
+
+                <div class="product-card">
+            <img src="asset/citrus.webp" alt="Jago Americano">
+            <h2>CITRUS COLD BREW</h2>
+            <p>Iced coffee with cold brew technique and a fresh, unique citrus taste.</p>
+        </div>
+    
+        <div class="product-card">
+            <img src="asset/vanilla.webp" alt="Kopi Susu Jago">
+            <h2>VANILLA LATTE</h2>
+            <p>Espresso and milk with the taste and scent of vanilla. Feel this tasty and premium combination in every sip.</p>
+        </div>
+    </section>
+
+    <section class="section-title">
+        <h2>NON-COFFEE</h2>
+        <div class="line"></div>
+    </section>
+        <section class="product-list">
+        <div class="product-card">
+            <img src="asset/matcha.webp" alt="Jago Americano">
+            <h2>MATCHA LATTE</h2>
+            <p>The JAGO Matcha Latte, made with premium-quality matcha and creamy milk for an authentic taste.</p>
+        </div>
+
+        <div class="product-card">
+            <img src="asset/coklat.webp" alt="Kopi Susu Jago">
+            <h2>KOPI SUSU JAGO</h2>
+            <p>The real chocolate milk uses 100% High Quality Belgian Dark Chocolate creating sweet, bitter, and creamy taste. Served with ice.</p>
+        </div>
+    </section>
+
+    <div class="visi-misi" id="visi-misi">
+        <h2>
+            VISI
+        </h2>
+        <p>
+            TO REVITALIZE NEIGHBORHOOD COMMERCE BY MODERNIZING SIDE STREET VENDORS
+        </p>
+        <h2>
+            MISI
+        </h2>
+        <p>
+            TO EMPOWER MICRO-ENTREPRENEURS BY EQUIPPING THEM WITH RE-MODERNIZED SIDE STREET CARTS AND DIGITAL TOOLS SO THEY CAN SERVE GREAT PRODUCTS TO THEIR CUSTOMERS WITH SPEED AND EASE.
+        </p>
+    </div>
+
+    <footer class="footer" id="footer">
+<div class="footer-container">
+    <!-- Left -->
+    <div class="footer-left">
+        <div class="logo">
+            <img src="asset/jago.png" alt="">
+        </div>
+        <p>
+        Jl. Karet Pasar Baru Barat VII No.8, Karet Tengsin,<br>
+        Kecamatan Tanah Abang, Kota Jakarta Pusat,<br>
+        Daerah Khusus Ibukota Jakarta 10250
+        </p>
+    </div>
+
+    <!-- Middle -->
+    <div class="footer-middle">
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="#">Blog</a>
+                <a href="#">Careers</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms And Conditions</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Product & Services</h4>
+                <a href="#">How It Works</a>
+                <a href="#">Jago Party</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+                <a href="mailto:support@jagocoffee.com">Email</a>
+                <a href="https://api.whatsapp.com/send?phone=6285217000079">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+<hr>
+
+    <div class="footer-bottom">
+    <p>Copyright © Jago Coffee. All rights reserved.</p>
+        <div class="socials">
+            <a href="https://www.instagram.com/jagoid/?hl=en">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/jago-coffee/">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/jagocoffee/">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.tiktok.com/@bangjagokopi?_t=8XpvBFZgId7&_r=1">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
