@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: rgb(255, 255, 255);
     font-family: 'Poppins', sans-serif;
@@ -22,6 +26,11 @@ nav{
 
 .navbar-right a:hover{
     color: rgb(248, 188, 99);
+}
+
+.navbar-left img{
+    height: 60px;
+    width: auto;
 }
 
 .hero{
@@ -279,6 +288,92 @@ button:hover {
     transform: scale(1.05);
 }
 
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #000;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,.3);
+    z-index: 9999;
+    transition: .3s;
+}
+
+.scroll-top:hover {
+    transform: scale(1.1);
+}
+
+        .footer {
+            background: rgb(233, 233, 233);
+            color: rgb(0, 0, 0);
+            padding: 60px 80px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .footer-left {
+            max-width: 900px;
+        }
+
+        .logo img{
+            height: 80px;
+            width: auto;
+        }
+
+        .footer-middle {
+            display: flex;
+            gap: 60px;
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }   
+
+        .footer-col a {
+            display: block;
+            color: #ddd;
+            font-size: 14px;
+            margin-bottom: 8px;
+            text-decoration: none;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #333;
+            margin: 40px 0;
+        }
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socials i{
+    width: 15px;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.socials a i{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+
+
 
 @media (max-width: 768px){
     .navbar-right{
@@ -296,6 +391,11 @@ button:hover {
     .navbar-right a{
         margin:10px 0;
         color: black;
+    }
+
+    .navbar-left img{
+        height: 45px;
+        width: auto;
     }
 
     .hamburger{
