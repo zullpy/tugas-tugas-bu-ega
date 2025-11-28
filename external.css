@@ -1,5 +1,5 @@
 html{
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
 }
 
 body{
@@ -152,7 +152,6 @@ nav{
     margin-top: auto;
 }
 
-
 button{
     border: 2px solid #000;
     background: transparent;
@@ -243,37 +242,36 @@ button:hover {
 
 .popup {
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,.6);
-    opacity: 0;
-    visibility: hidden;
-    display: flex;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
     justify-content: center;
     align-items: center;
-    transition: .3s ease;
+    text-align: center;
+    z-index: 9999;
 }
 
-#popup:target {
-    opacity: 1;
-    visibility: visible;
+.popup.show {
+    display: flex;
 }
 
 .popup-content {
     background: #fff;
-    padding: 30px;
+    padding: 20px;
     border-radius: 12px;
-    text-align: center;
-    width: 320px;
-    box-shadow: 0 8px 25px rgba(0,0,0,.3);
+    max-height: 80vh;
+    width: 400px;
+    overflow-y: auto;
 }
 
 .close {
     float: right;
-    font-size: 28px;
-    text-decoration: none;
-    color: #000;
-    margin-top: -10px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.swal2-container {
+    z-index: 999999 !important;
 }
 
 .order-btn {
@@ -376,7 +374,19 @@ hr {
     text-decoration: none;
 }
 
+.variant{
+    border: 2px solid #000;
+    background-color: white;
+    border-radius: 8px;
+    width: 80px;
+    text-align: center;
+}
 
+.price{
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 10px;
+}   
 
 
 @media (max-width: 768px){
@@ -487,6 +497,24 @@ hr {
 
     hr {
         margin: 25px 0;
+    }
+
+    .popup-content {
+        width: 300px; 
+    }
+
+    .BS{
+        margin-bottom: 5px;
+    }
+
+    .cart-items{
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+    .cart-items button{
+        font-size: 12px;
+        padding: 5px;
     }
 
 }

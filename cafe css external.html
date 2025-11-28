@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="external.css">
     <link rel="icon" type="image/x-icon" href="asset/favicon.ico">
 </head>
@@ -85,45 +86,71 @@
     </section>
     
     <section class="product-list">
-        <div class="product-card">
+        <div class="product-card" data-hot="20000" data-ice="22000">
             <img src="asset/americano.jpeg" alt="Jago Americano">
             <h2>AMERICANO</h2>
             <!-- <p>JAGO's signature Iced Americano, 100% arabica beans. gratis jika memesan americano 50 shot</p> -->
-            <button>Order Now</button>
+            <select class="variant">
+                <option value="hot">Hot</option>
+                <option value="ice">Ice</option>
+            </select>
+            <p class="price">Rp -</p>
+            <button >Order Now</button>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-hot="20000" data-ice="22000">
             <img src="asset/kopsu.jpeg" alt="Kopi Susu Jago">
             <h2>KOPI SUSU </h2>
             <!-- <p>Jago's brown sugar iced coffee. manisnya gula merah yang menggugah selera</p> -->
+            <select class="variant">
+                <option value="hot">Hot</option>
+                <option value="ice">Ice</option>
+            </select>
+            <p class="price">Rp -</p>
             <button>Order Now</button>
         </div>
 
-                <div class="product-card">
+                <div class="product-card" data-hot="20000" data-ice="22000">
             <img src="asset/cit.jpeg" alt="Jago Americano">
             <h2>CITRUS COLD BREW</h2>
             <!-- <p>Iced coffee with cold brew technique and a fresh, unique citrus taste.</p> -->
+            <select class="variant">
+                <option value="ice">Ice</option>
+            </select>
+            <p class="price">Rp -</p>
             <button>Order Now</button>
         </div>
     
-        <div class="product-card">
+        <div class="product-card" data-hot="20000" data-ice="22000">
             <img src="asset/vanilla.jpg" alt="Kopi Susu Jago">
             <h2>🌟VANILLA LATTE🌟</h2>
             <!-- <p>Espresso and milk with the taste and scent of vanilla. Feel this tasty and premium combination in every sip.</p> -->
+            <select class="variant">
+                <option value="ice">Ice</option>
+            </select>
+            <p class="price">Rp -</p>
             <button>Order Now</button>
         </div>
 
-        <div class="product-card" id="frappe">
+        <div class="product-card" id="frappe" data-hot="20000" data-ice="22000">
             <img src="asset/frappe.jpg" alt="Kopi Susu Jago" id="frappe">
             <h2>🌟FRAPPE BLEND AVOCADO🌟</h2>
             <!-- <p>Espresso, milk, and avocado .</p> -->
+            <select class="variant">
+                <option value="ice">Ice</option>
+            </select>
+            <p class="price">Rp -</p>
             <button>Order Now</button>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-hot="20000" data-ice="22000">
             <img src="asset/cappuccino.jpeg" alt="men coffee">
             <h2>CAPPUCCINO</h2>
             <!-- <p>Espresso and milk with the taste and scent of vanilla. Feel this tasty and premium combination in every sip.</p> -->
+            <select class="variant">
+                <option value="hot">Hot</option>
+            </select>
+            <p class="price">Rp -</p>
             <button>Order Now</button>
         </div>
     </section>
@@ -139,45 +166,71 @@
 </section>
     
     <section class="product-list">
-        <div class="product-card">
+        <div class="product-card"  data-hot="20000" data-ice="22000">
             <img src="asset/matcha.jpeg" alt="non-coffee">
             <h2>MATCHA</h2>
             <!-- <p>JAGO's signature Iced Americano, 100% arabica beans. gratis jika memesan americano 50 shot</p> -->
+            <select class="variant">
+                <option value="hot">Hot</option>
+                <option value="ice">Ice</option>
+            </select>
+            <p class="price">Rp -</p>
             <button>Order Now</button>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-hot="20000" data-ice="22000">
             <img src="asset/chocolate.jpeg" alt="non coffee">
             <h2>ICE CHOCOLATE</h2>
             <!-- <p>Jago's brown sugar iced coffee. manisnya gula merah yang menggugah selera</p> -->
+            <select class="variant">
+                <option value="hot">Hot</option>
+                <option value="ice">Ice</option>
+            </select>
+            <p class="price">Rp -</p>
             <button>Order Now</button>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-hot="20000" data-ice="22000">
             <img src="asset/lychee.jpeg" alt="non coffee">
             <h2>LYCHEE TEA</h2>
             <!-- <p>Iced coffee with cold brew technique and a fresh, unique citrus taste.</p> -->
+            <select class="variant">
+                <option value="ice">Ice</option>
+            </select>
+            <p class="price">Rp -</p>
             <button>Order Now</button>
         </div>
     
-        <div class="product-card">
+        <div class="product-card" data-hot="20000" data-ice="22000">
             <img src="asset/lemon tea.jpeg" alt="non coffee">
             <h2>LEMON TEA</h2>
             <!-- <p>Espresso and milk with the taste and scent of vanilla. Feel this tasty and premium combination in every sip.</p> -->
+            <select class="variant">
+                <option value="ice">Ice</option>
+            </select>
+            <p class="price">Rp -</p>
             <button>Order Now</button>
         </div>
 
-        <div class="product-card" id="frappe">
+        <div class="product-card" id="frappe" data-hot="20000" data-ice="22000">
             <img src="asset/milk tea.jpeg" alt="non coffee" id="frappe">
             <h2>BOBBA MILK TEA </h2>
             <!-- <p>Espresso, milk, and avocado .</p> -->
+            <select class="variant">
+                <option value="ice">Ice</option>
+            </select>
+            <p class="price">Rp -</p>
             <button>Order Now</button>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-hot="20000" data-ice="22000">
             <img src="asset/avocadosmothie.jpeg" alt="non coffee">
             <h2>AVOCADO SMOTHIE</h2>
             <!-- <p>Espresso and milk with the taste and scent of vanilla. Feel this tasty and premium combination in every sip.</p> -->
+            <select class="variant">
+                <option value="ice">Ice</option>
+            </select>
+            <p class="price">Rp -</p>
             <button>Order Now</button>
         </div>
     </section>
@@ -186,12 +239,11 @@
     <i class="fa-solid fa-cart-shopping"></i> 
 </a>
 
-<div id="popup" class="popup">
+<div class="popup">
     <div class="popup-content">
-        <a href="#" class="close">×</a>
+        <span class="close">&times;</span>
         <h2>Pesanan Anda</h2>
-        <p>Belum ada pesanan. Mulai pesan sekarang?</p>
-        <a href="#menu" class="order-btn">Pesan Sekarang</a>
+        <div id="cart-body">Belum ada pesanan, silahkan pesan terlebih dahulu</div>
     </div>
 </div>
 
@@ -206,45 +258,51 @@
 </section>
     
     <section class="product-list">
-        <div class="product-card">
+        <div class="product-card" data-ice="23000">
             <img src="asset/ricebowl.jpeg" alt="MEALS">
             <h2>🌟RICE BOWL AND KATSU🌟</h2>
             <!-- <p>JAGO's signature Iced Americano, 100% arabica beans. gratis jika memesan americano 50 shot</p> -->
+            <p class="price">Rp 23,000</p>
             <button>Order Now</button>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-ice="18000">
             <img src="asset/nasigoreng.jpeg" alt="meals">
             <h2>NASI GORENG</h2>
             <!-- <p>Jago's brown sugar iced coffee. manisnya gula merah yang menggugah selera</p> -->
+            <p class="price">Rp 18,000</p>
             <button>Order Now</button>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-ice="27000">
             <img src="asset/carbonara.jpeg" alt="meals">
             <h2>SPAGHETTI CARBONARA</h2>
             <!-- <p>Iced coffee with cold brew technique and a fresh, unique citrus taste.</p> -->
+            <p class="price">Rp 27,000</p>
             <button>Order Now</button>
         </div>
     
-        <div class="product-card">
+        <div class="product-card" data-ice="25000">
             <img src="asset/nasiteriyaki.jpeg" alt="meals">
             <h2>RICE AND CHIKEN TERIYAKI</h2>
             <!-- <p>Espresso and milk with the taste and scent of vanilla. Feel this tasty and premium combination in every sip.</p> -->
+            <p class="price">Rp 25,000</p>
             <button>Order Now</button>
         </div>
 
-        <div class="product-card" id="frappe">
+        <div class="product-card" id="frappe" data-ice="30000">
             <img src="asset/ramen.jpeg" alt="meals" id="frappe">
             <h2>RAMEN NOODLES</h2>
             <!-- <p>Espresso, milk, and avocado .</p> -->
+            <p class="price">Rp 30,000</p>
             <button>Order Now</button>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-ice="18000">
             <img src="asset/ayamgoreng.jpeg" alt="meals">
             <h2>MIE GORENG SPESIAL</h2>
             <!-- <p>Espresso and milk with the taste and scent of vanilla. Feel this tasty and premium combination in every sip.</p> -->
+            <p class="price">Rp 18,000</p>
             <button>Order Now</button>
         </div>
     </section>
@@ -264,51 +322,62 @@
 </section>
     
     <section class="product-list">
-        <div class="product-card">
+        <div class="product-card" data-ice="22000">
             <img src="asset/pancake.jpg" alt="snacks">
             <h2>🌟PANCAKE WITH ICE CREAM🌟</h2>
             <!-- <p>JAGO's signature Iced Americano, 100% arabica beans. gratis jika memesan americano 50 shot</p> -->
+            <p class="price">Rp 22,000</p>
             <button>Order Now</button>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-ice="15000">
             <img src="asset/french.jpeg" alt="snacks">
             <h2>FRENCH FRIES</h2>
             <!-- <p>Jago's brown sugar iced coffee. manisnya gula merah yang menggugah selera</p> -->
+            <p class="price">Rp 15,000</p>
             <button>Order Now</button>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-ice="25000">
             <img src="asset/chikenwings.jpeg" alt="snacks">
             <h2>SPICY CHIKEN WINGS</h2>
             <!-- <p>Iced coffee with cold brew technique and a fresh, unique citrus taste.</p> -->
+            <p class="price">Rp 25,000</p>
             <button>Order Now</button>
         </div>
     
-        <div class="product-card">
+        <div class="product-card" data-ice="20000">
             <img src="asset/pop.jpeg" alt="snacks">
             <h2>CHIKEN POPCORN</h2>
             <!-- <p>Espresso and milk with the taste and scent of vanilla. Feel this tasty and premium combination in every sip.</p> -->
+            <p class="price">Rp 20,000</p>
             <button>Order Now</button>
         </div>
 
-        <div class="product-card" id="frappe">
+        <div class="product-card" id="frappe" data-ice="22000">
             <img src="asset/fish.jpeg" alt="snacks" id="frappe">
             <h2>FISH FINGERS</h2>
             <!-- <p>Espresso, milk, and avocado .</p> -->
+            <p class="price">Rp 22,000</p>
             <button>Order Now</button>
         </div>
 
-        <div class="product-card">
+        <div class="product-card" data-ice="25000">
             <img src="asset/fishchips.jpeg" alt="snacks">
             <h2>FISH AND CHIPS</h2>
             <!-- <p>Espresso and milk with the taste and scent of vanilla. Feel this tasty and premium combination in every sip.</p> -->
+            <p class="price">Rp 25,000</p>
             <button>Order Now</button>
         </div>
     </section>
 
+
+
 <br>
 <br>
+
+
+
 
 <footer class="footer" id="footer">
 <div class="footer-container">
@@ -363,4 +432,5 @@
     </div>
 </footer>
 </body>
+<script src="script.js"></script>
 </html>
