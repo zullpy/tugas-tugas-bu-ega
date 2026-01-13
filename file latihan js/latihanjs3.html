@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan js ke tiga</title>
+</head>
+<body>
+    <p id="text">teks awal</p>
+    <button onclick="ubah()">ubah</button>
+
+    <script>
+        function ubah() {
+            // jika masih teks awal maka akan di ubah ke teks sudah di ubah 
+            if (document.getElementById("text").innerHTML == "teks awal") {
+                document.getElementById("text").innerHTML = "teks yang sudah di ubah";
+            }
+            // dan jika sudah di ubah maka akan kembali ke teks awal lagi 
+            else {
+                document.getElementById("text").innerHTML = "teks awal";
+            }
+        }
+        </script>
+</body>
+</html>

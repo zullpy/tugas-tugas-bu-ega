@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan js</title>
+</head>
+
+<body>
+    <button onclick="pesan()">klik aku dong</button>
+    <br>
+    <span id="output"></span>
+    <br>
+    <button onclick="reset()">reset</button>
+    <script>
+        function pesan() {
+            // contoh manipulasi DOM 
+            document.getElementById("output").innerHTML = "tombol berhasil di klik";
+            // ini alert
+            alert("tombol berhasil di klik");
+        }
+
+        // fungsi reset jika di pencet id output nya akan kosong
+        function reset() {
+            document.getElementById("output").innerHTML = "";
+        }
+    </script>
+</body>
+
+</html>
