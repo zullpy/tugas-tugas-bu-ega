@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projek kalkulator</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #D4CCB8;
+        }
+
+        .calculator {
+            width: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.775);
+            text-align: center;
+            margin-top: 150px;
+            border-radius: 10px;
+        }
+
+        button {
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            border: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.63);
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: #919191;
+            border: none;
+        }
+
+        input {
+            width: 80%;
+            height: 30px;
+            border: 1px solid #c9c9c9;
+            border-radius: 5px;
+        }
+
+        /* agar tidak muncul tombol panah nya*/
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <h3>kalkulator</h3>
+        <input type="number" name="" id="angka1" placeholder="angka pertama" required>
+        <br>
+        <br>
+        <input type="number" name="" id="angka2" placeholder="angka kedua" required>
+        <br>
+        <br>
+        <div class="button">
+            <button id="tambah" onclick="hitung('+')">+</button>
+            <button id="kurang" onclick="hitung('-')">-</button>
+            <button id="kali" onclick="hitung('*')">×</button>
+            <button id="bagi" onclick="hitung('/')">÷</button>
+        </div>
+        <h4>Hasil: <span id="hasil">0</span></h4>
+    </div>
+    <script>
+        // ini adalah fungsi dari hitung(operator) yang berisi tambah, kurang, kali, dan bagi
+        function hitung(operator) {
+            // mengambil nilai/value dari input dengan menggunakan DOM manipulation terus dijadikan parseFloat agar mengubah dari string ke bilangan desimal (agar tidak terjadi string + string)
+            const angka1 = parseFloat(document.getElementById('angka1').value);
+            const angka2 = parseFloat(document.getElementById('angka2').value);
+            // untuk hasil dari perhitungan dan diinisialisasi dengan nilai 0
+            let hasil = 0;
+
+            // percabangan untuk operator tambah, kurang, kali, dan bagi
+            if (operator === '+') {
+                hasil = angka1 + angka2;
+                // jika operator nya tambah maka hasilnya adalah value angka1 + angka2
+            } else if (operator === '-') {
+                hasil = angka1 - angka2;
+                // jika kondisi operator yang diatas salah maka dia akan mengecek apakah operator kurang
+            } else if (operator === '*') {
+                hasil = angka1 * angka2;
+                // jika kondisi operator yang diatas salah maka dia akan mengecek apakah operator kali
+            } else if (operator === '/') {
+                hasil = angka1 / angka2;
+                // dan jika kondisi diatas semua salah maka dia akan menggunakan perkalian
+            }
+
+            // jika masih kosong akan muncul "isi dulu dong inputnya"
+            if (isNaN(hasil)) {
+                hasil = "isi dulu dong inputnya";
+            }
+
+            // menampilkan hasil ke dalam span dengan id hasil
+            document.getElementById('hasil').innerText = hasil;
+        }
+
+    </script>
+</body>
+
+</html>
