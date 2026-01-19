@@ -39,6 +39,7 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
+            margin-top: 125px;
         }
     </style>
 </head>
@@ -52,15 +53,34 @@
         <input type="number" name="" id="angka2">
         <br>
         <br>
-        <button id="tambah">+</button>
-        <button id="kurang">-</button>
-        <button id="kali">*</button>
-        <button id="bagi">/</button>
+        <button id="tambah" onclick="hitung('+')">+</button>
+        <button id="kurang" onclick="hitung('-')">-</button>
+        <button id="kali" onclick="hitung('*')">*</button>
+        <button id="bagi" onclick="hitung('/')">/</button>
         <h4>Hasil: <span id=hasil>0</span></h4>
     </div>
 
     <script>
+        function hitung(operasi) {
+            var angka1 = parseFloat(document.getElementById("angka1").value);
+            var angka2 = parseFloat(document.getElementById("angka2").value);
+            var hasil = 0;
 
+            if (operasi === '+') {
+                hasil = angka1 + angka2;
+            } else if (operasi === '-') {
+                hasil = angka1 - angka2;
+            } else if (operasi === '*') {
+                hasil = angka1 * angka2;
+            } else if (operasi === '/') {
+                hasil = angka1 / angka2;
+            }
+
+            document.getElementById("hasil").innerText = hasil;
+        }
+
+
+        
 
 
 
