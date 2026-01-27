@@ -39,6 +39,9 @@ function tampil(){
 
 // Fungsi untuk menghapus nama dari daftar berdasarkan indeks
 function hapus(index) {
-    data.splice(index, 1); // Menghapus item dari array data
-    tampil(); // Memanggil fungsi tampil untuk memperbarui tampilan
+    // ini akan memunculkan alert konfirmasi sebelum menghapus data
+    if (confirm("apakah anda yakin ingin menghapus data ini?")){
+        data.splice(index, 1); // Menghapus item dari array data
+        tampil(); // Memanggil fungsi tampil untuk memperbarui tampilan
+    }
 }
