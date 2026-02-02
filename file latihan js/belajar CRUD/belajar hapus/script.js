@@ -1,29 +1,27 @@
 let data = [];
 
 function tambah(){
-    let nama = document.getElementById("nama").value;
+    let nama = document.getElementById('nama').value;
 
-    if (nama === "") {
-        alert("input tidak boleh kosong!!");
-        return;
-    }else if (/\d/.test(nama)) {
-        alert("nama tidak boleh mengandung angka!!");
-        return;
+    if (nama == ""){
+        alert("nama tidak boleh kosong!!!")
+    }else if(/\d/.test(nama)){
+        alert("nama tidak boleh mengandung angka!!!");
     }
 
     data.push(nama);
     tampil();
-    document.getElementById("nama").value = "";
+    document.getElementById('nama').value = "";
 }
 
 function tampil(){
-    let list = document.querySelector(".list-nama");
-    list.innerHTML = "";
+    let list = document.querySelector('.list-nama');
 
-    data.forEach((item, index) => {
+    list.innerHTML = "";
+    data.forEach((nama, index) => {
         list.innerHTML += `
         <li>
-            <span>${item}</span>
+            <span>${nama}</span>
             <button onclick="hapus(${index})">hapus</button>
         </li>
         `;

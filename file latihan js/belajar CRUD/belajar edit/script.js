@@ -1,14 +1,12 @@
 let data = [];
 
 function tambah(){
-    let nama =document.getElementById("nama").value;
+    let nama = document.getElementById("nama").value;
 
-    if(nama == ""){
-        alert("input tidak boleh kosong!!");
-        return;
+    if (nama == ""){
+        alert("nama tidak boleh kososng!!!");
     }else if(/\d/.test(nama)){
-        alert("nama tidak boleh mengandung angka!!");
-        return;
+        alert("nama tidak boleh mengandung angka!!!");
     }
 
     data.push(nama);
@@ -17,11 +15,11 @@ function tambah(){
 }
 
 function tampil(){
-    let list = document.querySelector(".list-nama");
-    list.innerHTML = "";
+    let list =document.querySelector(".list-nama");
 
-    data.forEach((item, index) => {
-        list.innerHTML += `
+    list.innerHTML = "";
+    data.forEach((item, index) =>{
+        list.innerHTML +=`
         <li>
             <span>${item}</span>
             <button onclick="edit(${index})">edit</button>
@@ -31,18 +29,17 @@ function tampil(){
 }
 
 function edit(index){
-    let newNama = prompt("masukan nama baru:", data[index]);
+    let newNama = prompt("msukan nama baru:", data[index]);
 
-    if (newNama === null) {
+    if (newNama == null){
         return;
-    }else if(newNama == ""){
-        alert("nama tidak boleh kosong!!");
+    }else if (newNama == ""){
+        alert("nama tidak boleh kososng!!!");
         return;
     }else if(/\d/.test(newNama)){
-        alert("nama tidak boleh mengandung angka!!");
+        alert("nama tidak boleh mengandung angka!!!");
         return;
-    }else{
-        data[index] = newNama;
-        tampil();
     }
+    data[index] = newNama;
+    tampil();
 }
