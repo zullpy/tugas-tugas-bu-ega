@@ -19,14 +19,14 @@ h2 {
 }
 
 input[type="text"] {
-    width: 100%;
+    width: 1255px;
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-button {
+.add, .hapus, .edit {
     width: 100%;
     padding: 8px;
     background: #4CAF50;
@@ -37,7 +37,7 @@ button {
     margin-bottom: 10px;
 }
 
-button:hover {
+.add:hover, .hapus:hover, .edit:hover {
     background: #45a049;
 }
 
@@ -56,9 +56,33 @@ li {
     align-items: center;
 }
 
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
 li button {
-    width: auto;
-    padding: 4px 8px;
+    width: 90px;
+    height: 40px;
+    padding: 8px 8px;
     font-size: 12px;
+    font-weight: bolder;
     margin: 0;
+}
+
+.hapus-semua{
+    right: 50px;
+    display: flex;
+    position: fixed;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 5px;
+}
+
+.hapus-semua:hover{
+    background-color: #45a049;
 }
